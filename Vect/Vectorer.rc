@@ -1,0 +1,102 @@
+#include "Resources.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "Файл"
+    BEGIN
+        MENUITEM "Создать",                     IDM_NEW
+        MENUITEM "Открыть...",                  IDM_OPEN
+        MENUITEM "Сохранить",                   IDM_SAVE, GRAYED
+        MENUITEM "Сохранить как...",            IDM_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Выход",                       IDM_EXIT
+    END
+    POPUP "Правка"
+    BEGIN
+        MENUITEM "Удалить",                     IDM_DEL
+        MENUITEM SEPARATOR
+        MENUITEM "Поднять на 1",                IDM_UP_1
+        MENUITEM "Поднять на 10",               IDM_UP_10
+        MENUITEM SEPARATOR
+        MENUITEM "Опустить на 1",               IDM_DOWN_1
+        MENUITEM "Опустить на 10",              IDM_DOWN_10
+    END
+    POPUP "Вид"
+    BEGIN
+        MENUITEM "Инструменты",                 IDM_TOOLBAR, CHECKED
+        MENUITEM "Палитра",                     IDM_PALETTE, CHECKED
+        MENUITEM "Строка состояния",            IDM_STATUSBAR, CHECKED
+        MENUITEM "Список объектов",             IDM_LIST, CHECKED
+    END
+    POPUP "Справка"
+    BEGIN
+        MENUITEM "Краткая справка...",          IDM_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "О программе...",              IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+IDI_ICON                ICON    DISCARDABLE     "icon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+IDB_PALETTE             BITMAP  DISCARDABLE     "palette.bmp"
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+IDB_TOOLBAR TOOLBAR DISCARDABLE  20, 20
+BEGIN
+    SEPARATOR
+    BUTTON      ID_OPEN
+    BUTTON      ID_SAVE
+    BUTTON      ID_INFO
+    BUTTON      ID_RGB
+    BUTTON      ID_ARROW
+    BUTTON      ID_LINE
+    BUTTON      ID_RECTANGLE
+    BUTTON      ID_CIRCLE
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1                       "Создать новый файл"
+    2                       "Открыть файл для редактирования"
+    3                       "Сохранить файл"
+    4                       "Сохранить файл под именем ..."
+    5                       "Выход из программы"
+    6                       "Удалить объект"
+    7                       "Поднять вверх по списку на 1"
+    8                       "Поднять вверх по списку на 10"
+    9                       "Опустить вниз по списку на 1"
+    10                      "Опустить вниз по списку на 10"
+    11                      "Панель инструментов"
+    12                      "Панель цветов"
+    13                      "Строка состояния и помощи"
+    14                      "Список объектов"
+    15                      "Краткая помощь по программе"
+    16                      "O программе"
+    20                      "Операции с файлами"
+    21                      "Операции с документом"
+    22                      "Операции с интерфейсом"
+    23                      "Информация о программе"
+END
